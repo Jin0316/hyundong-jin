@@ -68,7 +68,7 @@ body {
 .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
 
 /* ── HERO ──────────────────────────────────────────── */
-#hero { padding: 1.0rem 0 2.5rem; border-bottom: 1px solid var(--border); }
+#hero { padding: 3rem 0 1.2rem; border-bottom: 1px solid var(--border); }
 .hero-inner {
   display: grid;
   grid-template-columns: 168px 1fr;
@@ -105,7 +105,7 @@ body {
 
 /* ── SECTIONS ──────────────────────────────────────── */
 .section {
-  padding: 1.0rem 0; border-bottom: 1px solid var(--border);
+  padding: 1.2rem 0; border-bottom: 1px solid var(--border);
   opacity: 0; transform: translateY(20px);
   transition: opacity .55s ease, transform .55s ease;
 }
@@ -193,6 +193,7 @@ body {
 }
 .pub-authors { font-size: .83rem; color: var(--muted); margin-bottom: .4rem; }
 .pub-authors strong { color: var(--text); font-weight: 600; }
+.pub-venue { font-size: .84rem; color: var(--muted); margin-bottom: .35rem; }
 .pub-note { font-size: .78rem; color: var(--muted); font-style: italic; margin-bottom: .35rem; }
 .pub-links { display: flex; gap: .4rem; flex-wrap: wrap; }
 .pub-links a {
