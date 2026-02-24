@@ -166,7 +166,7 @@ body {
   object-fit: contain;      /* 잘림 없이 전체 표시 */
   border-radius: 4px;
   border: 1px solid var(--border);
-  background: #f8f8f8;
+  background: #ffffff;
 }
 .pub-thumb-ph {
   width: var(--thumb-w);    /* ← 변수 사용 */
