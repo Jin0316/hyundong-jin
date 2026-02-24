@@ -68,7 +68,7 @@ body {
 .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
 
 /* ── HERO ──────────────────────────────────────────── */
-#hero { padding: 3rem 0 2.5rem; border-bottom: 1px solid var(--border); }
+#hero { padding: 1.0rem 0 2.5rem; border-bottom: 1px solid var(--border); }
 .hero-inner {
   display: grid;
   grid-template-columns: 168px 1fr;
