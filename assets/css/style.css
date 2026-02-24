@@ -76,7 +76,7 @@ body {
 }
 .hero-photo {
   width: 168px; height: 200px;
-  object-fit: cover; object-position: top center;
+  object-fit: contain; object-position: top center;
   border-radius: 5px;
   box-shadow: 0 4px 28px rgba(0,0,0,.11);
 }
