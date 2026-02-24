@@ -280,3 +280,23 @@ footer { text-align: center; padding: 2.5rem 2rem; font-size: .8rem; color: var(
   #navbar nav { gap: .8rem; }
   #navbar nav a { font-size: .72rem; }
 }
+
+
+.misc-heading {
+  font-size: .82rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 1.6rem; margin-bottom: .6rem;
+}
+.misc-heading:first-child { margin-top: 0; }
+.misc-list { display: flex; flex-direction: column; gap: .35rem; list-style: none; }
+.misc-list li {
+  font-size: .9rem; display: flex; align-items: baseline;
+  gap: .5rem; line-height: 1.5;
+}
+.misc-list li::before {
+  content: "◆"; font-size: .4rem; color: var(--accent);
+  flex-shrink: 0; position: relative; top: -2px;
+}
+.misc-main { color: var(--text); font-weight: 500; }
+.misc-sub  { color: var(--muted); font-size: .85rem; }
