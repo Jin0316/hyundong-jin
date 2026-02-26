@@ -137,7 +137,7 @@ body {
 /* ── EDUCATION ─────────────────────────────────────── */
 .edu-list { display: flex; flex-direction: column; gap: 1.5rem; }
 .edu-item {
-  display: grid; grid-template-columns: 120px 1fr;
+  display: grid; grid-template-columns: 150px 1fr;
   gap: 1.2rem; align-items: start;
 }
 .edu-period { font-size: .82rem; color: var(--muted); font-weight: 500; padding-top: 3px; }
