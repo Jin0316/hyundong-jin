@@ -137,7 +137,7 @@ body {
 /* ── EDUCATION ─────────────────────────────────────── */
 .edu-list { display: flex; flex-direction: column; gap: 1.5rem; }
 .edu-item {
-  display: grid; grid-template-columns: 120px 1fr;
+  display: grid; grid-template-columns: 150px 1fr;
   gap: 1.2rem; align-items: start;
 }
 .edu-period { font-size: .82rem; color: var(--muted); font-weight: 500; padding-top: 3px; }
@@ -166,7 +166,7 @@ body {
   object-fit: contain;      /* 잘림 없이 전체 표시 */
   border-radius: 4px;
   border: 1px solid var(--border);
-  background: #f8f8f8;
+  background: #ffffff;
 }
 .pub-thumb-ph {
   width: var(--thumb-w);    /* ← 변수 사용 */
