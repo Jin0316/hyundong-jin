@@ -17,7 +17,7 @@
   --max-w:     900px;
   --radius:    6px;
   --thumb-w:   240px;   /* ← 썸네일 너비: 여기 하나만 바꾸면 전체 적용 */
-  --thumb-h:   150px;   /* ← 썸네일 높이: 여기 하나만 바꾸면 전체 적용 */
+  --thumb-h:   100px;   /* ← 썸네일 높이: 여기 하나만 바꾸면 전체 적용 */
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
