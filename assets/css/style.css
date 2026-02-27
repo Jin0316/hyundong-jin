@@ -16,8 +16,8 @@
   --nav-h:     52px;
   --max-w:     900px;
   --radius:    6px;
-  --thumb-w:   300px;   /* ← 썸네일 너비: 여기 하나만 바꾸면 전체 적용 */
-  --thumb-h:   130px;   /* ← 썸네일 높이: 여기 하나만 바꾸면 전체 적용 */
+  --thumb-w:   160px;   /* ← 썸네일 너비: 여기 하나만 바꾸면 전체 적용 */
+  --thumb-h:   110px;   /* ← 썸네일 높이: 여기 하나만 바꾸면 전체 적용 */
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -73,11 +73,11 @@ body {
 #hero { padding: 3rem 0 1.2rem; border-bottom: 1px solid var(--border); }
 .hero-inner {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 168px 1fr;
   gap: 3rem; align-items: start;
 }
 .hero-photo {
-  width: 200px; height: 240px;
+  width: 168px; height: 200px;
   object-fit: contain; object-position: top center;
   border-radius: 5px;
   box-shadow: 0 4px 28px rgba(0,0,0,.11);
@@ -137,7 +137,7 @@ body {
 /* ── EDUCATION ─────────────────────────────────────── */
 .edu-list { display: flex; flex-direction: column; gap: 1.5rem; }
 .edu-item {
-  display: grid; grid-template-columns: 150px 1fr;
+  display: grid; grid-template-columns: 120px 1fr;
   gap: 1.2rem; align-items: start;
 }
 .edu-period { font-size: .82rem; color: var(--muted); font-weight: 500; padding-top: 3px; }
@@ -166,7 +166,7 @@ body {
   object-fit: contain;      /* 잘림 없이 전체 표시 */
   border-radius: 4px;
   border: 1px solid var(--border);
-  background: #ffffff;
+  background: #f8f8f8;
 }
 .pub-thumb-ph {
   width: var(--thumb-w);    /* ← 변수 사용 */
@@ -210,7 +210,44 @@ body {
 }
 .pub-links a:hover { background: var(--accent); color: #fff !important; border-color: var(--accent); opacity: 1; }
 
-/* ── AWARDS ────────────────────────────────────────── */
+/* ── PUBLICATION TOGGLE ────────────────────────────── */
+.pub-hidden { display: none; }
+.pub-hidden.visible { display: grid; }
+
+#toggle-pub {
+  font-size: .75rem; font-weight: 600;
+  padding: .25rem .8rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 100px;
+  background: var(--accent-lt);
+  color: var(--accent);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: background .2s, color .2s;
+  vertical-align: middle;
+  margin-left: .8rem;
+}
+#toggle-pub:hover { background: var(--accent); color: #fff; }
+
+/* ── SUBSECTION TITLES ─────────────────────────────── */
+.subsection-title {
+  font-size: .82rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .4rem;
+  margin: 1.8rem 0 1rem;
+}
+.subsection-title:first-of-type { margin-top: 0; }
+.svc-subhead {
+  font-size: .8rem; font-weight: 700;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: .45rem; margin-bottom: .9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── MISC ──────────────────────────────────────────── */
 .awards-list { display: flex; flex-direction: column; gap: .75rem; }
 .award-item { display: flex; align-items: baseline; gap: .75rem; font-size: .93rem; }
 .award-item::before {
@@ -252,9 +289,20 @@ body {
 .teach-role { font-weight: 600; }
 .teach-where { color: var(--muted); font-size: .85rem; }
 
+/* ── SUBSECTION TITLES (within a merged section) ───── */
+.subsection-title {
+  font-size: .82rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted);
+  margin: 2rem 0 .9rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
+}
+.subsection-title:first-of-type { margin-top: 0; }
+
 /* ── SERVICES ──────────────────────────────────────── */
 .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-.svc-group h3 {
+.svc-group h3, .svc-subhead {
   font-size: .8rem; font-weight: 700;
   letter-spacing: .09em; text-transform: uppercase;
   color: var(--muted); border-bottom: 1px solid var(--border);
@@ -264,24 +312,7 @@ body {
 .svc-list li { font-size: .87rem; color: var(--text); }
 .svc-list li span { color: var(--muted); font-size: .8rem; display: block; }
 
-/* ── FOOTER ────────────────────────────────────────── */
-footer { text-align: center; padding: 2.5rem 2rem; font-size: .8rem; color: var(--faint); }
-
-/* ── RESPONSIVE ────────────────────────────────────── */
-@media (max-width: 680px) {
-  .pub-item { grid-template-columns: 1fr; }
-  .pub-thumb, .pub-thumb-ph { width: 100%; height: 120px; }
-  .hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-  .hero-photo { width: 120px; height: 144px; }
-  .hero-name { font-size: 2.2rem; }
-  .edu-item { grid-template-columns: 1fr; gap: .3rem; }
-  .project-item, .talk-item { grid-template-columns: 1fr; gap: .2rem; }
-  .services-grid { grid-template-columns: 1fr; gap: 2rem; }
-  #navbar nav { gap: .8rem; }
-  #navbar nav a { font-size: .72rem; }
-}
-
-
+/* ── MISC ──────────────────────────────────────────── */
 .misc-heading {
   font-size: .82rem; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase;
@@ -300,3 +331,20 @@ footer { text-align: center; padding: 2.5rem 2rem; font-size: .8rem; color: var(
 }
 .misc-main { color: var(--text); font-weight: 500; }
 .misc-sub  { color: var(--muted); font-size: .85rem; }
+
+/* ── FOOTER ────────────────────────────────────────── */
+footer { text-align: center; padding: 2.5rem 2rem; font-size: .8rem; color: var(--faint); }
+
+/* ── RESPONSIVE ────────────────────────────────────── */
+@media (max-width: 680px) {
+  .pub-item { grid-template-columns: 1fr; }
+  .pub-thumb, .pub-thumb-ph { width: 100%; height: 120px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-photo { width: 120px; height: 144px; }
+  .hero-name { font-size: 2.2rem; }
+  .edu-item { grid-template-columns: 1fr; gap: .3rem; }
+  .project-item, .talk-item { grid-template-columns: 1fr; gap: .2rem; }
+  .services-grid { grid-template-columns: 1fr; gap: 2rem; }
+  #navbar nav { gap: .8rem; }
+  #navbar nav a { font-size: .72rem; }
+}
