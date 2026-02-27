@@ -2,6 +2,16 @@
    Hyundong Jin · Personal Homepage · script.js
    ============================================================ */
 
+/* ── Publication toggle ──────────────────────────────── */
+function togglePublications() {
+  const hidden = document.querySelectorAll('.pub-hidden');
+  const btn = document.getElementById('toggle-pub');
+  const isOpen = btn.textContent.startsWith('−');
+
+  hidden.forEach(el => el.classList.toggle('visible', !isOpen));
+  btn.textContent = isOpen ? '+ All Publications' : '− Less';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Navbar shadow on scroll ─────────────────────── */
