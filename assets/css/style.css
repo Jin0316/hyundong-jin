@@ -349,7 +349,9 @@ footer { text-align: center; padding: 2.5rem 2rem; font-size: .8rem; color: var(
   #navbar nav a { font-size: .72rem; }
 }
 
-/* News 항목 간격 축소 */
+/* News 토글: 기본 숨김 */
+#news .news-hidden { display: none; }
+
 #news .edu-list { gap: .55rem; }
 #news .edu-item { margin-bottom: .4rem; }
 #news .edu-item p { margin: .12rem 0; }
