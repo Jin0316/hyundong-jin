@@ -48,10 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleNews() {
+  const hidden = document.querySelectorAll('#news .news-hidden');
   const btn = document.getElementById('toggle-news');
-  const open = btn.classList.toggle('open');
-  document.querySelectorAll('#news .news-hidden').forEach(el => {
-    el.style.display = open ? '' : 'none';
-  });
-  btn.textContent = open ? '– See less' : '+ See more';
+  const isOpen = btn.textContent.startsWith('−');
+  hidden.forEach(el => el.classList.toggle('visible', !isOpen));
+  btn.textContent = isOpen ? '+ See more' : '− Less';
 }
