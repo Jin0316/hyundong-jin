@@ -214,7 +214,7 @@ body {
 .pub-hidden { display: none; }
 .pub-hidden.visible { display: grid; }
 
-#toggle-pub {
+#toggle-pub, #toggle-news {
   font-size: .75rem; font-weight: 600;
   padding: .25rem .8rem;
   border: 1.5px solid var(--accent);
@@ -227,7 +227,7 @@ body {
   vertical-align: middle;
   margin-left: .8rem;
 }
-#toggle-pub:hover { background: var(--accent); color: #fff; }
+#toggle-pub:hover, #toggle-news:hover { background: var(--accent); color: #fff; 
 
 /* ── SUBSECTION TITLES ─────────────────────────────── */
 .subsection-title {
