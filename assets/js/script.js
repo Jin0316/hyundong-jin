@@ -46,3 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.section').forEach(s => observer.observe(s));
 
 });
+
+function toggleNews() {
+  const btn = document.getElementById('toggle-news');
+  const open = btn.classList.toggle('open');
+  document.querySelectorAll('#news .news-hidden').forEach(el => {
+    el.style.display = open ? '' : 'none';
+  });
+  btn.textContent = open ? '– See less' : '+ See more';
+}
