@@ -353,6 +353,6 @@ footer { text-align: center; padding: 2.5rem 2rem; font-size: .8rem; color: var(
 #news .news-hidden { display: none; }
 #news .news-hidden.visible { display: grid; } 
 
-#news .edu-list { gap: .55rem; }
-#news .edu-item { margin-bottom: .4rem; }
-#news .edu-item p { margin: .12rem 0; }
+#news .edu-list { gap: .3rem; }
+#news .edu-item { margin-bottom: .2rem; }
+#news .edu-item p { margin: .05rem 0; }
