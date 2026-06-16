@@ -227,7 +227,7 @@ body {
   vertical-align: middle;
   margin-left: .8rem;
 }
-#toggle-pub:hover, #toggle-news:hover { background: var(--accent); color: #fff; 
+#toggle-pub:hover, #toggle-news:hover { background: var(--accent); color: #fff; }
 
 /* ── SUBSECTION TITLES ─────────────────────────────── */
 .subsection-title {
